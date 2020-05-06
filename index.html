@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Paint</title>
+
+  <!--Merriweather font from google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+
+  <!--Bootrap stylesheet-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!--custom stylesheet-->
+  <link rel="stylesheet" href="styles.css">
+
+  <!--app favicon-->
+  <link rel="icon" href="favicon.png">
+
+  <!--Bootrap scripts-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!--Menu container-->
+  <div class="container">
+    <!--Dynamic Bootstrap row of sliders-->
+    <div class="row">
+      <!--Red slider-->
+      <div class="col-md-6 col-lg-3 slidercontainer">
+        <label class="sliderlabel">Red</label>
+        <div class="range">
+          <input type="range" min="0" max="255" value="0" id="r">
+          <output id="r_out">0</output>
+        </div>
+      </div>
+      <!--Green slider-->
+      <div class="col-md-6 col-lg-3 slidercontainer">
+        <label class="sliderlabel">Green</label>
+        <div class="range">
+          <input type="range" min="0" max="255" value="0" id="g">
+          <output id="g_out">0</output>
+        </div>
+      </div>
+      <!--Blue slider-->
+      <div class="col-md-6 col-lg-3 slidercontainer">
+          <label class="sliderlabel">Blue</label>
+        <div class="range">
+          <input type="range" min="0" max="255" value="0" id="b">
+          <output id="b_out">0</output>
+        </div>
+      </div>
+      <!--Width slider-->
+      <div class="col-md-6 col-lg-3 slidercontainer">
+        <label class="sliderlabel">Stroke Width</label>
+        <div class="range">
+          <input type="range" min="1" max="40" value="5" id="strokeWidth" onchange="strokeOut.value=value">
+          <output id="strokeOut">5</output>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Drawing canvas-->
+  <canvas id="canvas" width="300" height="300"></canvas>
+
+
+  <script <script src="script.js" charset="utf-8"></script>
+  </script>
+</body>
+
+</html>
